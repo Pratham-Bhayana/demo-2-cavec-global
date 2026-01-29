@@ -3,13 +3,11 @@
   publish = "."
   command = "echo 'No build required for static site'"
 
-# Redirect rules for clean URLs
+# Redirect root to home page
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
-  conditions = {Role = ["public"]}
+  from = "/"
+  to = "/courses.html"
+  status = 301
 
 # Headers for better security and performance
 [[headers]]
