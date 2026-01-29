@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Universities &amp; Programs Extension V2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-100 min-h-screen pb-24">
+<!-- Sticky Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between">
+<div class="text-[#0d141b] dark:text-white flex size-12 shrink-0 items-center">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-[#0d141b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display">Universities</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-transparent text-[#0d141b] dark:text-white">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Search Bar Section -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-[#4c739a] flex border-none bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-800 text-[#0d141b] dark:text-white focus:outline-0 focus:ring-0 h-full placeholder:text-[#4c739a] px-4 rounded-r-xl pl-2 text-base font-normal" placeholder="Search universities or programs" value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 py-2 overflow-x-auto hide-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white px-4 shadow-sm shadow-primary/20">
+<span class="text-sm font-medium">All Schools</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-[#0d141b] dark:text-slate-200 text-sm font-medium">Global Ranking</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-[#0d141b] dark:text-slate-200 text-sm font-medium">Subject</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-4">
+<span class="text-[#0d141b] dark:text-slate-200 text-sm font-medium">Online</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Featured Section Header -->
+<div class="flex justify-between items-center px-4 pb-1 pt-6">
+<h2 class="text-[#0d141b] dark:text-white text-[20px] font-bold leading-tight tracking-[-0.015em] font-display">Featured Institutions</h2>
+<span class="text-primary text-sm font-semibold">View all</span>
+</div>
+<!-- University Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<!-- University Card 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col cursor-pointer">
+<div class="h-32 w-full bg-cover bg-center" data-alt="University campus with modern architecture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADKFuf99pE1JWJ9x-9F7c-DX-gJG2hYqaFOjKA64aJ1nR3MsjzXdPV5rxNUHy-Sd80nJC96RXaRqM7ZmYuUkRr4q-6gKrAL-_FQN1O5md-7ZFXEfxVUP0blsjj4_wIg1k-5WTAGJNy9FTz57N7qz6MDi4jCsDgrjXwXdJg58rUgj_m1PG5zwm23K3foLTP6MMYOEuFS88ZdYfuV14ask7f6nTRVFy9_dbQGb-RSa7r6_aYb70OTv9UxToF40mMexN7evfqibWKI1bq");'>
+<div class="m-2 bg-white/90 dark:bg-slate-900/90 rounded-lg px-2 py-1 inline-block">
+<span class="text-primary text-[10px] font-bold uppercase tracking-wider">Top 10</span>
+</div>
+</div>
+<div class="p-3">
+<p class="text-[#0d141b] dark:text-white text-sm font-bold leading-tight line-clamp-1 font-display">Stanford University</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[#4c739a] text-xs">location_on</span>
+<p class="text-[#4c739a] dark:text-slate-400 text-[11px] font-medium">Palo Alto, CA</p>
+</div>
+</div>
+</div>
+<!-- University Card 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col cursor-pointer">
+<div class="h-32 w-full bg-cover bg-center" data-alt="Aerial view of MIT campus river" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDomuTSDVl_N3WoNRQriBBlFPNklfTarzgMMhZwbQjtCy-7Zsz22wewtMLTS6Qof3MDtOi1s3H_p_Gh7YuavMunDQJjE9FDDw6BL9MIkOEOms2EHh59ArR6YTwWVCa51cfsdj-6ugRoalQmH3o1DRZ54HIkbOFe-UF2mYksVClLsMyj2NnMuAmti__6RCmNG0bUJEtjabMu5JcREo3G6pqYONf8ec9VPfePfZ68VZ8-FbB9rrs2d-1PAqourbsh6apwyMtbBXOyklnZ");'>
+<div class="m-2 bg-white/90 dark:bg-slate-900/90 rounded-lg px-2 py-1 inline-block">
+<span class="text-primary text-[10px] font-bold uppercase tracking-wider">Popular</span>
+</div>
+</div>
+<div class="p-3">
+<p class="text-[#0d141b] dark:text-white text-sm font-bold leading-tight line-clamp-1 font-display">MIT</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[#4c739a] text-xs">location_on</span>
+<p class="text-[#4c739a] dark:text-slate-400 text-[11px] font-medium">Cambridge, MA</p>
+</div>
+</div>
+</div>
+<!-- University Card 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col cursor-pointer">
+<div class="h-32 w-full bg-cover bg-center" data-alt="Traditional brick building university campus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAznT1OmRK6GAQLgdOXmahgfbT3tYN55aKPuKpjgPSSZAraiVTWgso0okwsmy_opxYnglHpEhBOXAZmaTvecxZui0qdLj5FD3XOO8bAj5SilavmxdFA2f_LZ2nFLK1NqHK05YzQR-f-nvNWHvlthdDhrJk5BoMWdkOJkfuifqqczfnS9dV26OUMF45pzV0rnF48zrZkYUsOYxylgX5rtrJVRWnh6pb9qv6FL67fGG-YpWINxHZleCR-CpWqgTgZlJqNzzF9yK43-qVO");'>
+</div>
+<div class="p-3">
+<p class="text-[#0d141b] dark:text-white text-sm font-bold leading-tight line-clamp-1 font-display">Harvard University</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[#4c739a] text-xs">location_on</span>
+<p class="text-[#4c739a] dark:text-slate-400 text-[11px] font-medium">Cambridge, MA</p>
+</div>
+</div>
+</div>
+<!-- University Card 4 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col cursor-pointer">
+<div class="h-32 w-full bg-cover bg-center" data-alt="University clock tower and historical buildings" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7Kv9noZuUNYZxibUAnThYsitJ_5uIp7HT_3xXo9-Ii7dFelbG-3GVEBlbE7vCR7fapUGwsjG0ccMN7fMG3EMhmY70ITWjb1waXwC5_jROqD7zZqk1ZXaLprO9mS4OdG3pg6CJeDZnVkbGCY7SdDoXXYlhHcEpsrYcN4Ctk7_X6gtEJ73-cDqlpgNxhXkfFpctNok5g5TOLmAmvcumpnS8D5M1UVbPfRq5uf_2MUSonxq3cuAwKpYtsIhEepPHJXRn0M3iJ8B-lLjb");'>
+</div>
+<div class="p-3">
+<p class="text-[#0d141b] dark:text-white text-sm font-bold leading-tight line-clamp-1 font-display">Oxford University</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[#4c739a] text-xs">location_on</span>
+<p class="text-[#4c739a] dark:text-slate-400 text-[11px] font-medium">Oxford, UK</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Professional Certificates Nested Preview -->
+<div class="bg-primary/5 dark:bg-primary/10 mt-4 pb-8">
+<h2 class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-6 font-display">Professional Certificates</h2>
+<p class="px-4 text-[#4c739a] dark:text-slate-400 text-sm -mt-2 mb-4 leading-relaxed">Earn a career credential from world-class universities</p>
+<!-- Certificate Card Horizontal List -->
+<div class="flex gap-4 px-4 overflow-x-auto hide-scrollbar">
+<!-- Program Card 1 -->
+<div class="min-w-[280px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md">
+<div class="h-36 w-full bg-cover bg-center" data-alt="Abstract digital network pattern" style='background-image: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBr46MGf1e0vV3Vrjorb8ZK5nfO5J18KiGG29qeqSt6vuW-Q785YanhMGXgW48JjPH8bsvHMzKzMFit58d9rQUeLG-ADyNfaSA-tUAvrv1H0uyuzb_OuQDa3_fFRp_3dlW576RcrwpZdjuLEQzDn5tne1uKaQjaG_280MlMu_jsUrFG9jM6Ummk6_IrtLrwYkP7EV0CG36ldCnKzHjEuJXTRuhHt735CMxOKKmptNaDM5svpqr0b2DBDgpYNrpWaPM1LPeNZMxONALC");'>
+<div class="flex justify-end p-3">
+<div class="bg-white/20 backdrop-blur-md p-1.5 rounded-full text-white">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</div>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="size-6 rounded-full bg-slate-200" data-alt="Stanford University logo"></div>
+<span class="text-[#4c739a] dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Stanford Online</span>
+</div>
+<h3 class="text-[#0d141b] dark:text-white font-bold text-base leading-tight mb-2 line-clamp-2">Machine Learning Specialization</h3>
+<div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span class="text-[#4c739a] dark:text-slate-400 text-xs font-medium">3 Months</span>
+</div>
+<span class="text-primary font-bold">$49/mo</span>
+</div>
+</div>
+</div>
+<!-- Program Card 2 -->
+<div class="min-w-[280px] bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md">
+<div class="h-36 w-full bg-cover bg-center" data-alt="Laptop with financial charts" style='background-image: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMvgLFr0JU14IRR-yPHyoEI1DN9ZJUyuRpQE0s68ahRREPDV2nP3GPocSypk1zKR44nev_FwtOmzl7_ByD_YY4zSiowy6w46uCuNIH6t3xHpKDVruRKoSShWeCDiqG6RxAtSh9cNdzmTB_sSyfc5tp544cR89wr5agBO8tMchVAKEpvGtXj-ne2zNOnzbqrHpUhfmPOy5EagGLbv73WaooL7M7W9djeo8H3IpgTmCNJHjzhe3gtf0nPdRsXt8I-c6Z8qBgdBjoYSId");'>
+<div class="flex justify-end p-3">
+<div class="bg-white/20 backdrop-blur-md p-1.5 rounded-full text-white">
+<span class="material-symbols-outlined text-lg">bookmark</span>
+</div>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="size-6 rounded-full bg-slate-200" data-alt="Harvard University logo"></div>
+<span class="text-[#4c739a] dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">Harvard Business</span>
+</div>
+<h3 class="text-[#0d141b] dark:text-white font-bold text-base leading-tight mb-2 line-clamp-2">Entrepreneurship in Emerging Economies</h3>
+<div class="flex items-center justify-between mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">schedule</span>
+<span class="text-[#4c739a] dark:text-slate-400 text-xs font-medium">6 Weeks</span>
+</div>
+<span class="text-primary font-bold">Free</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Space -->
+<div class="h-10 bg-transparent"></div>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex justify-around items-center py-2 px-4 z-50">
+<a href="courses.html" class="flex flex-col items-center gap-1 text-[#4c739a] dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center gap-1 text-[#4c739a] dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Courses</span>
+</a>
+<a href="exam.html" class="flex flex-col items-center gap-1 text-[#4c739a] dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Exams</span>
+</a>
+<a href="mentors.html" class="flex flex-col items-center gap-1 text-[#4c739a] dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Mentors</span>
+</a>
+<a href="progress.html" class="flex flex-col items-center gap-1 text-[#4c739a] dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-medium">Progress</span>
+</a>
+<a href="universities.html" class="flex flex-col items-center gap-1 text-primary relative">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="text-[10px] font-bold">Universities</span>
+<div class="absolute -top-1 size-1 bg-primary rounded-full"></div>
+</a>
+</nav>
+</body></html>

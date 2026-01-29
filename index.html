@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduPlatform Courses List V1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-50">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between px-4 py-4">
+<div class="flex items-center gap-3">
+<div class="text-primary material-symbols-outlined" style="font-size: 28px;">school</div>
+<h1 class="text-xl font-bold tracking-tight">Courses</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-[#4c739a]">search</span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center border-2 border-primary" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwpvkp76_5vYsHgEIk9NgFEF1kGmsjZzzJVjAJfF3sNjG0gGGQnlkdQmvTnzMviGMscwpPpVUHE4D8ZJureYnoB5HH7ui-AWBf4fNpeqj_QoBqG_vBxQzwe2rsH8HbiGQQ6jJE8HZ6HovLfXJIDI-fZRXCwGCWWZoPcKNjyY5YzD0aYsClBwJ-s4j3V2OENaiIHsI0OIRZwmKZ_Gwr8MfwphwAOo8pcEM_4Afi1FVX4BwlcBwgfyGfIhY36nCH-rrTX-qs92Vo2z7z')"></div>
+</div>
+</div>
+</header>
+<main class="pb-24">
+<!-- Search Bar Component -->
+<div class="px-4 py-4">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-[#4c739a] flex border-none bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0d141b] dark:text-slate-50 focus:outline-0 focus:ring-0 border-none bg-white dark:bg-slate-800 focus:border-none h-full placeholder:text-[#4c739a] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal" placeholder="Search for courses..." value=""/>
+</div>
+</label>
+</div>
+<!-- Featured Courses Section -->
+<section>
+<div class="flex items-center justify-between px-4 pt-4">
+<h2 class="text-xl font-bold">Featured Courses</h2>
+<button class="text-primary text-sm font-semibold">See All</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-4 px-4 py-4">
+<!-- Featured Card 1 -->
+<div class="min-w-[320px] bg-primary/10 dark:bg-primary/20 rounded-xl p-4 flex flex-col gap-3 shadow-sm border border-primary/10">
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-cover bg-center" data-alt="UI/UX professional design workspace" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3zCDPX8GsRXvo2HZgWR9xNsxWiitsm1F7fSMVdKOAOnImJ28P0cA4B0j3YyAJF_Yal-cvJ5PvJgz-SJpSG-mIab0IOaOoVvSbe1TatlgJ_A6yD2G35FHJHCuYtrb5h6dAq37mRXwGyfS_wEaAOZqm0tTd6XEywh2MFWivj9cPm6JBZQeP7AxOMlI-gy2repNXUghJOatKGBr4Pp_ik5ett_WUMBduxLNZctAe6QkHaDzBfpKkXQyjIzNW_93hbaL5oTcjxyPbfcIW')">
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase">Bestseller</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold leading-tight">UI/UX Design Masterclass</h3>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm line-clamp-2">Learn the fundamentals of product design with expert mentors from top tech companies.</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="size-6 rounded-full bg-cover bg-center" data-alt="Mentor Alex Rivera portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWZaSrvDQCroJG-w0nWhknc3UmcuLTy_0OtU2QJFJWey2Qh8xEC8Cf_YLt_GdbTB8zFCfcYG61GPz-199Mn7hNxkX19l464s3YXGeekfSgd-Mfg6MzZLH0-oBL6UsakYzMyGiuJr8up3K-uYiYf4RaxIvUgXzJSz4jy4AgGQQuQF8hlwYrBByBEmdG5760bd5rtpXlCo8SD8KiFqkOAwDiF3snouvFisd1d_0ZQPjX7fWYk03PrGKkVlTo9f-IoFSlOB9LKlYW54FG')"></div>
+<span class="text-xs text-[#4c739a] dark:text-slate-400 font-medium">Alex Rivera</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-lg font-bold text-sm shadow-md active:scale-[0.98] transition-transform">
+                        View Course
+                    </button>
+</div>
+<!-- Featured Card 2 -->
+<div class="min-w-[320px] bg-emerald-500/10 dark:bg-emerald-500/20 rounded-xl p-4 flex flex-col gap-3 shadow-sm border border-emerald-500/10">
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-cover bg-center" data-alt="Coding on a laptop in a cafe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUih3rzyLZHEYbDeZXNdDUpN_o1OIuJZr-wIxXTUqMuTENjhjY9GV9U0kgdBBn8JNv2-8UPD9sg6uNlVdM2IcxWSkMP7pQXVO6cjtn-s9oFjmngrSyRaplg9TbEdip4mR01EIBTR80Kt8eEsSALs6A_FjBPGctuqjFfc17hMzVGw8tgVAamyQv6s1DpKgl9dntCp6-esVFo8sD9Z7ASSF7EUhKfYFLGCRA4gN8k3eaJmh-zb8bIGI229zDWYByIWjQ7xfrfGZDJ3_q')">
+<span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase">Top Rated</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold leading-tight">Fullstack React Development</h3>
+<p class="text-[#4c739a] dark:text-slate-400 text-sm line-clamp-2">Master modern web development from database to frontend using React and Node.js.</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="size-6 rounded-full bg-cover bg-center" data-alt="Mentor Sarah Chen portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWNZDGOInVUdOKFkpw0flMIOB-lF2lMmQ6mshIHrNIZQRb0UPTVC8yio3Ta0kwhga_sD_JXBxGrQGex69PZ97A39-EKcNcxeISKlY96qXfVgwwJd1oh68ZS2SxGwzuMQeob1lXA_T6eq7GTdpMyhc5KBc84AB3phM8CXZqNphRPH8Q9iccypMeqdj-QT9mSAc4faI1huAJr0jWFa7XrnnpW5MLyAo7_xHDOpPZRx4lbdmikiL2FPWk1V3ygszva9OfEO9Jb1xSm5RS')"></div>
+<span class="text-xs text-[#4c739a] dark:text-slate-400 font-medium">Sarah Chen</span>
+</div>
+</div>
+<button class="w-full bg-emerald-600 text-white py-3 rounded-lg font-bold text-sm shadow-md active:scale-[0.98] transition-transform">
+                        View Course
+                    </button>
+</div>
+</div>
+</section>
+<!-- Newly Launched -->
+<section class="mt-4">
+<h2 class="text-xl font-bold px-4 mb-3">Newly Launched</h2>
+<div class="flex overflow-x-auto hide-scrollbar gap-3 px-4">
+<!-- New Course 1 -->
+<div class="min-w-[200px] bg-white dark:bg-slate-800 rounded-lg p-2 shadow-sm relative">
+<div class="absolute top-3 right-3 z-10 bg-primary text-white text-[9px] font-bold px-2 py-0.5 rounded-md">NEW</div>
+<div class="w-full aspect-square rounded-md bg-cover bg-center" data-alt="Financial data on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLDICS4i4kUQmROwNcvDi08LmHKf33ClDTM371m--r4U47MHSg99whHDSTscnaS5JGfhwuB9L70KvcOXqRSY_IftNlDnLfsP_ecupZiKlQH6z9p4wJRweA_ZKZTpB-h0jU-q5Mt7fuDrefmqSs2enNPpgrwVK216k2oGuY7fMR0YqobNnDVRhEsOmgKFdpAAj2y6rsNU7KckBIi7DCfRf3YPry14ofmYjHJ6aHxpE_k7yUNKRI3OMJoftiuxnnAPH25QsnpGHQmzp5')"></div>
+<div class="mt-2">
+<p class="text-[10px] text-primary font-bold uppercase">Finance</p>
+<h4 class="text-sm font-bold leading-tight truncate">Crypto Fundamentals</h4>
+</div>
+</div>
+<!-- New Course 2 -->
+<div class="min-w-[200px] bg-white dark:bg-slate-800 rounded-lg p-2 shadow-sm relative">
+<div class="absolute top-3 right-3 z-10 bg-primary text-white text-[9px] font-bold px-2 py-0.5 rounded-md">NEW</div>
+<div class="w-full aspect-square rounded-md bg-cover bg-center" data-alt="Photography camera setup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAknbR2Yok10XbReO4oRo0Rc3sfBsCImnP3a7rJXMmjdsGvgmwECShLBzDHyN0qnrXr_F2TjIIKwTgharSEUBvnu6ooBH-NF_X4Z8CPbtvebC1jMfiXdTeg7Yfi1PNKl9obfF4TBGPtZNB1kZCIDBgK6fIc6JZAKyT5F_WBL6ZdBpIjY06H5a_BNEiH0H62b896e9rh_BbZKMn9s5l5cEMwiEAemDBujzdle00XYUIzYISX66pflDoWzabb2jpYHgvcO9mPqiqdAWHh')"></div>
+<div class="mt-2">
+<p class="text-[10px] text-primary font-bold uppercase">Arts</p>
+<h4 class="text-sm font-bold leading-tight truncate">Digital Photography 101</h4>
+</div>
+</div>
+<!-- New Course 3 -->
+<div class="min-w-[200px] bg-white dark:bg-slate-800 rounded-lg p-2 shadow-sm relative">
+<div class="absolute top-3 right-3 z-10 bg-primary text-white text-[9px] font-bold px-2 py-0.5 rounded-md">NEW</div>
+<div class="w-full aspect-square rounded-md bg-cover bg-center" data-alt="Creative branding logo design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKCo40SYSELHR_-dPHpMPWDFcXLWdyKp76R0YUKArTTBjNb-EGFU1yQdWxkp4ogoV5TRauUWr59KsUIIF6pTGraUk7k60ewCfszVKtS8uAQdv9VSiyOMlbUUKqVx4eRhkDixG-zO9dvZvzAuHNPJphpSLcsDqRGCiI2EJDn1pVyQ4DxcBKw5UnxuWzSuefosmZ2m6jkoEjCUISd293NqPoj6XFfLiMATOZX9ZaDq7oA6NZVqd_ve0zrzvZnZeiDZ0OHdcsDCzXYndd')"></div>
+<div class="mt-2">
+<p class="text-[10px] text-primary font-bold uppercase">Design</p>
+<h4 class="text-sm font-bold leading-tight truncate">Logo Design Masterclass</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- All Courses Section (Grid) -->
+<section class="mt-8 px-4">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold">All Courses</h2>
+<span class="text-xs text-[#4c739a] font-medium">124 Courses found</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Course Item 1 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/3] rounded-xl bg-cover bg-center" data-alt="Code on monitor screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKYYhWGjwwTzzdEkJsEr8bfwQYa67Qz2z2iD2hLFmALAgg_V7lhftUj8FnH3ccPR8aisA7o0Y9bJIvRIcH5NqQ-DgfUJxqDgJHusqxezO5AE1XbBMnsoTk0XQUfALH2t8PBIn0U9Y3PP6AQrchQ9xMcoTpF9x8fhwvsJ31oCYSFE6bq4hDBmusmjNVj5HrHnlwFbAX-891_y3kX1q2GrFg710hT33NbokYRtWOm3ROf9yZQnpSirhg4w_HfophqYbICriGuR9nItum')"></div>
+<div class="px-1">
+<div class="flex gap-1 mb-1">
+<span class="bg-gray-100 dark:bg-slate-800 text-[#4c739a] text-[9px] px-2 py-0.5 rounded-full font-medium">Beginner</span>
+</div>
+<h4 class="text-sm font-bold leading-tight">Intro to Python</h4>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="size-4 rounded-full bg-cover bg-center" data-alt="Mentor Mark S." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD65tHJI-KM4XzAbx-b2ZyH_If4vlTZxpC2C5a4WkdxZ1xFMRTtzO-yRmlorqMGNz7F2D5OHyMCGaE05Ku1yGLXrg2ODcLj8rQLD3osDbLqo3x6N7epsNn-jQOS5WPnHWivXlwWpoGZgZLDd1v0Kc0XtsSj8YQiLda94vd37ttiUziTC7v-o4WyyAl8-y4vYLWGFJ2si9-spNd8HPlnExM3rJ85N8tlUVly4fUBrJdwtfLSYbfrkImq9QYYbzF9EXhEENmin0Q_auzG')"></div>
+<p class="text-[10px] text-[#4c739a] dark:text-slate-400">Mark S.</p>
+</div>
+</div>
+</div>
+<!-- Course Item 2 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/3] rounded-xl bg-cover bg-center" data-alt="Data analytics charts" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpPlIxDkoUSH4ViWJRb_aqLDqIh682-E-eH5olNlCwHt5Xuvhj9ruCxMuJZqvbHvFSjulpd6wLdwrikHxhdmYtGaTbCCiCfNCjkZPfUWxQtXqjgdO2Kleu9nl8Xguaat-LiBjcIbB0tQLwEcUQjVFhAtVT8zAu-jxOCkjBy_gLS-93g7QX_pzqscKwKfQLRhm9lQ5-GJ05oFldCG_kBjWC9yKvhUNmXRSimV8tsg2ZYxX2EAmAeAYESP0BRgnXgfGQQAL9wKfsOvz7')"></div>
+<div class="px-1">
+<div class="flex gap-1 mb-1">
+<span class="bg-gray-100 dark:bg-slate-800 text-[#4c739a] text-[9px] px-2 py-0.5 rounded-full font-medium">Business</span>
+</div>
+<h4 class="text-sm font-bold leading-tight">Data Visualization</h4>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="size-4 rounded-full bg-cover bg-center" data-alt="Mentor Emily W." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqI7H-Q3MWY-MCdIyprjM1Y2bnA56Man8LowjkhmpHY5GWokwrErQgYIht6YKc8L_3lmRmoMuurhO_Tuo3O-bsKV5mcwNMWUTLviEktTisSGPlS_FmCtDt320TXbGEl9stga9getyoQvFDKSu04hhbL4tGIm2eQBYjxNLVTwv91qtiTjqpH4KCiKSBpmXDkZhgxXTY_hyuEwPZk3fjGHpHkEqBmak0SPSEnjL9de4fgzSspajSw4cQFCOUcSALqNLpWnXORdgxlPxC')"></div>
+<p class="text-[10px] text-[#4c739a] dark:text-slate-400">Emily W.</p>
+</div>
+</div>
+</div>
+<!-- Course Item 3 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/3] rounded-xl bg-cover bg-center" data-alt="Productivity planning tools" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2KKR12JyboDenIU_IflwMNUr4IbqJFQws0lEn1b6mJcAC-72nwGd-Js8VHNi05sndlSPRAxAYntZbPQhTZPgakgffAPQylfZ6XRoMHnEF7txH3Poc00YROIEfh-5wQqqTU-udz3vCjOWMsXbbrllYtHbrmFBZvzFT3D-ZXy7bVfjxlO2B4_9OtmrbEEivAjw4ykLKGZnjDZiEjDX-kG6gi-DIx7CVIxsYq_ZmGNzvY5TVUfZBx_KJoXk1zIQwUCFzzuMyUQAScs9a')"></div>
+<div class="px-1">
+<div class="flex gap-1 mb-1">
+<span class="bg-gray-100 dark:bg-slate-800 text-[#4c739a] text-[9px] px-2 py-0.5 rounded-full font-medium">Design</span>
+</div>
+<h4 class="text-sm font-bold leading-tight">Product Strategy</h4>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="size-4 rounded-full bg-cover bg-center" data-alt="Mentor David K." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB65-JMmkcIdycm1Nk2nU0-2u-L1qISbaWeHWVMFFcWmFqKBy6lcwRa4pAHG1wJbdWFmeqbnq89D85WYSKzMjaJrbtYko6xeuV-sKVMVIV60n1cZhKZJomzEqJjIYKnXmG_JNPWs16sU7-VpaDXqKMf1hy-h4rPXYh9kgPrPKZ5zLP1uI3HBOjqftdwBDY1V9XkrccT2XdqR66fawB9m8brMumPaJeO9WqkaP3ca9JD12tZZbC0WdMXUqMQ2uC7S6Qdlz_cpTuvcCsp')"></div>
+<p class="text-[10px] text-[#4c739a] dark:text-slate-400">David K.</p>
+</div>
+</div>
+</div>
+<!-- Course Item 4 -->
+<div class="flex flex-col gap-2">
+<div class="aspect-[4/3] rounded-xl bg-cover bg-center" data-alt="Microchips and hardware" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-JPgRm77kXupCMvdgG09N47G7Z-bP52HeiSkQ_96bcIUPzB1UG0Gu_Y_kRu3o5WF-a0uUtzRx2UA4oQ6cZGGd31-_HA8dhM527N-arhq51309ej4e72IB6172nwda-8-cgF-t8RaSNCWN_fcK7s-IqbZHrwEI_rZLlp5FH-tIyREOZuwH7No_bIOYdSBVQ9ewzkJJKqRnw9vXNXErkQZu6tVKVcjE4YuQumgxBklbp5qnIWGAoo9RcofbAkP3ceKYdpbELvlw7jk1')"></div>
+<div class="px-1">
+<div class="flex gap-1 mb-1">
+<span class="bg-gray-100 dark:bg-slate-800 text-[#4c739a] text-[9px] px-2 py-0.5 rounded-full font-medium">Advanced</span>
+</div>
+<h4 class="text-sm font-bold leading-tight">System Architecture</h4>
+<div class="flex items-center gap-1.5 mt-1.5">
+<div class="size-4 rounded-full bg-cover bg-center" data-alt="Mentor Julie P." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtZrLnZTdE3AmQCMoC2KcxjcOzjc6hX7_aW0Ng31QaBuc60qFmM5y3y4LMgprCD7d2LCsxBLvGC1gZVQRegekOY68R0xluWt8xr3ZapM_fQyjY7prnZaRFdPnpcMy3EbakvS-8a-5gsYhVsnaXhScNcJVLrY7hrjL-SFhfCHJbunTAKSOynT0yV7WLO9jOTikE7PZrdj0xvCA--TKa38xTWa6_KEXHnPTkJr3tSrg6isaRltz9aBcA79nHgMeoUKnFAGeQLoY6Wv5C')"></div>
+<p class="text-[10px] text-[#4c739a] dark:text-slate-400">Julie P.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Tab Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 px-4 py-3 flex justify-between items-center z-50">
+<a href="courses.html" class="flex flex-col items-center gap-1 text-[#4c739a] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined font-bold">explore</span>
+<span class="text-[10px] font-bold">Courses</span>
+</a>
+<a href="exam.html" class="flex flex-col items-center gap-1 text-[#4c739a] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Exams</span>
+</a>
+<a href="mentors.html" class="flex flex-col items-center gap-1 text-[#4c739a] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Mentors</span>
+</a>
+<a href="progress.html" class="flex flex-col items-center gap-1 text-[#4c739a] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-medium">Progress</span>
+</a>
+<a href="universities.html" class="flex flex-col items-center gap-1 text-[#4c739a] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="text-[10px] font-medium">Universities</span>
+</a>
+</nav>
+</body></html>

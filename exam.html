@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-3 flex items-center justify-between border-b border-[#cfdbe7] dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Exams Center</h1>
+</div>
+<button class="p-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="flex-1 pb-24 overflow-y-auto">
+<!-- Monitoring Indicator -->
+<div class="p-4">
+<div class="flex items-center justify-between gap-4 rounded-xl border border-primary/20 bg-primary/5 p-4 dark:bg-primary/10">
+<div class="flex flex-col gap-0.5">
+<p class="text-primary text-sm font-bold leading-tight flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        System Monitoring Active
+                    </p>
+<p class="text-[#4c739a] dark:text-slate-400 text-xs font-normal leading-normal">Camera Active | Tab Lock Enabled</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">videocam</span>
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+</div>
+</div>
+</div>
+<!-- Section: Ongoing Exams -->
+<section>
+<h2 class="text-[#0d141b] dark:text-slate-100 text-[22px] font-bold leading-tight tracking-tight px-4 pb-1 pt-4">Online Exams</h2>
+<!-- Ongoing Card -->
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm border border-[#cfdbe7] dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+<div class="w-full h-32 bg-center bg-no-repeat bg-cover relative" data-alt="Abstract geometric pattern with mathematical symbols" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVoMW3zofMmnDFlp-Tl7LGV529nn2JBA6cFQPuHmKmvo3VwqNATVrNwyuky72S9rKFQuJyu8mx7p3O6CenDHyDHUt9UE-xo4wPYgGsYXyR39geSJqm-USsuZNrXm_q7gVsBqd0GCeh1tLsyf7a4qiRxUcvFpgB1T2zGZox8QL0k4H8igtbkeExeVq18hQD78Kus60bF968u9L9gG1NUD487wz69UGKxkzcOFj8g66imYPWN3Ao8uZsTIZXWncYC6vw4VrsGLkyKXhI");'>
+<div class="absolute top-3 left-3 px-2 py-1 bg-primary text-white text-[10px] font-bold rounded uppercase tracking-wider">
+                            Ongoing
+                        </div>
+</div>
+<div class="flex w-full flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Mathematics</p>
+<p class="text-[#0d141b] dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Advanced Calculus III</p>
+<div class="flex items-center justify-between mt-2">
+<div class="flex flex-col">
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-normal">60 Mins • 30 Questions</p>
+<p class="text-red-500 text-[10px] font-medium mt-0.5 italic">Ends in 45:12</p>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold transition-all hover:bg-primary/90">
+<span>Start Exam</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Upcoming Card -->
+<div class="px-4 pb-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-sm border border-[#cfdbe7] dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+<div class="w-full h-32 bg-center bg-no-repeat bg-cover relative" data-alt="Historical architecture sketch of a classical building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_E5zkojdJq8pjhv-X3PR1buFdP08nh86DQlcHRiM4GryFUlrKicSNGY6GiCTzAOv4QaMA_BqjGr6AxRoSASRlb0BPk588BNN9FvCH9GpK0gasHrir_EK2YPUFvLlh0b-eRC1XKWOF70f1XtKGJQ0J6CPPke_KMZoXzIw_TCg_L1x8O-I-v_Q3HTYFZfjrvXmhMQx7bKYc4uVCvt627ORSkyYIaw3qYD0_prw_OxkEqYFzMONsPjEFC5XyVbIetQQ1UeP07otRXFBn");'>
+<div class="absolute top-3 left-3 px-2 py-1 bg-slate-500 text-white text-[10px] font-bold rounded uppercase tracking-wider">
+                            Upcoming
+                        </div>
+</div>
+<div class="flex w-full flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">History</p>
+<p class="text-[#0d141b] dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Modern World History</p>
+<div class="flex items-center justify-between mt-2">
+<p class="text-[#4c739a] dark:text-slate-400 text-sm font-normal">45 Mins • 20 Questions</p>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-semibold">
+<span>Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Recent Results -->
+<section>
+<h2 class="text-[#0d141b] dark:text-slate-100 text-[22px] font-bold leading-tight tracking-tight px-4 pb-1 pt-6">Recent Results</h2>
+<!-- Result Summary Card -->
+<div class="p-4">
+<div class="bg-white dark:bg-slate-900 border border-[#cfdbe7] dark:border-slate-800 rounded-xl p-5 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div class="flex flex-col">
+<p class="text-slate-500 text-xs font-semibold uppercase">Completed</p>
+<p class="text-[#0d141b] dark:text-white text-lg font-bold">Physics: Quantum Mechanics</p>
+</div>
+<div class="relative flex items-center justify-center size-14">
+<svg class="size-full -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-slate-100 dark:stroke-slate-800" cx="18" cy="18" fill="none" r="16" stroke-width="3"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-xs font-bold text-primary">85%</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mb-4">
+<div class="bg-green-50 dark:bg-green-900/20 p-2 rounded-lg text-center">
+<p class="text-green-600 dark:text-green-400 text-sm font-bold">24</p>
+<p class="text-slate-500 text-[10px]">Correct</p>
+</div>
+<div class="bg-red-50 dark:bg-red-900/20 p-2 rounded-lg text-center">
+<p class="text-red-600 dark:text-red-400 text-sm font-bold">4</p>
+<p class="text-slate-500 text-[10px]">Incorrect</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-lg text-center">
+<p class="text-slate-600 dark:text-slate-400 text-sm font-bold">2</p>
+<p class="text-slate-500 text-[10px]">Skipped</p>
+</div>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary/10 text-primary text-sm font-semibold hover:bg-primary/20 transition-colors">
+                        View Detailed Report
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-[#cfdbe7] dark:border-slate-800 px-4 py-2 pb-6 flex justify-between items-center z-30">
+<a href="courses.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a href="index.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Courses</span>
+</a>
+<a href="exam.html" class="flex flex-col items-center gap-1 text-primary active-nav">
+<span class="material-symbols-outlined">assignment</span>
+<span class="text-[10px] font-medium">Exams</span>
+</a>
+<a href="mentors.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium">Mentors</span>
+</a>
+<a href="progress.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-medium">Progress</span>
+</a>
+<a href="universities.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="text-[10px] font-medium">Universities</span>
+</a>
+</nav>
+</body></html>
